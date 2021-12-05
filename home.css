@@ -1,0 +1,59 @@
+body{
+    background-color:rgba(212, 216, 210, 0.555);
+}
+
+#bod{
+    text-align: center;
+    background-color:rgba(207, 206, 194, 0.87);
+    width:550px;
+    margin:auto;
+    border:solid;
+    border-radius:8%;
+}
+
+#contra{
+    margin:auto;
+    margin-top:-7px;
+    margin-left:-40px;
+    height:80px;
+    width:482px;
+    background-color:rgba(236, 234, 236, 0.925);
+    font-size: 25px;
+    text-align:initial;
+    position:relative;
+}
+#contra:hover{
+    background-color:rgb(233, 241, 240);
+    font-size:27px; 
+}
+#cont{
+    margin:auto;
+    height:70px;
+    width:500px;
+    background-color:rgba(230, 223, 229, 0.438);
+    font-size: 25px;
+    text-align:left;
+    border:solid;
+    margin-top:-20px;
+}
+.delete{
+    margin-top:-45px;
+    margin-left: 400px;
+}
+.delete a{
+    color:red;
+    font-size:18px;
+}
+#hold{
+    margin:auto;
+    height:470px;
+    width:500px;
+    border:solid;
+    overflow:auto;
+    scrollbar-width:thin;
+    border-radius:2%;
+    background-color:rgba(219, 216, 204, 0.849);
+}
+.formal{
+    font-size:20px;
+}

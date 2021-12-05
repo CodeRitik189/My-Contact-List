@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            MY CONTACT LIST
+        </title>
+        <link rel="stylesheet" href="/css/home.css">
+        <script src="https://kit.fontawesome.com/048607c7f6.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="bod">
+       
+        <h1> <i class="fas fa-address-book"></i> <%= title %></h1>
+            <div style="margin-top:30px;" >
+             <form action="/search" method="post">
+                <input style="height:30px;width:300px;border:solid;" type="text" name="name" placeholder=" Search Name/Number..." required>
+                <button style="height:30px;width:200px;border:solid;" type="submit"><i class="fas fa-search"></i></button>
+             </form>
+            </div> 
+             <div id="cont">
+             <p style="margin-top:0px;"><%= searched.name %><%= searched.num %> </p>
+             </div>
+             <% if(searched.name!=""){ %>
+             <div class="delete">
+              <a href="/deletecontact/?id=<%= searched._id %>">DELETE</a>
+             </div>
+             <div style="margin-top:23px;">
+             <a href="/deletesearch"><i class="fas fa-backspace"></i></a>
+             </div>
+                <% } else { %>
+                <p style="margin-top:-30px;">Search a valid Name/Phone Number</p>
+                <% } %>
+      <div id="hold">
+        <ul style="list-style-type:none">
+            <% for(let i of contact){%>
+               <li>
+                   <div id="contra">
+                  <div class="contact">
+                   <p style="margin-top:15px;margin-left:15px;"> Name : <%= i.name %>  <br> Phone  <%= i.phone %> </p>
+                  </div>
+                  <div class="delete">
+                      <a href="/deletecontact/?id=<%= i._id %>">DELETE</a>
+                  </div>
+                  </div>
+                </li>
+              <%} %>
+          </ul>
+        </div>
+        <form action="/create-contact" method="post">
+           <input style="height:30px;width:200px;border:solid;" type="text" name="name" placeholder=" Enter Name" required>
+           <input style="height:30px;width:200px;border:solid;" type="number" name="phone" placeholder=" Enter Number" required>
+           <button style="height:30px;border:solid;" type="submit">Add Contact</button>
+        </form>
+     <br>
+    </div>
+         <script type="text/javascript" src="/java/home.js"></script>  
+    </body>
+</html>
